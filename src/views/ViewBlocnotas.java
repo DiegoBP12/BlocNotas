@@ -35,12 +35,13 @@ public class ViewBlocnotas extends javax.swing.JFrame {
         jm_guardar = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Bloc de Notas");
 
         jta_texto.setColumns(20);
         jta_texto.setRows(5);
         jScrollPane1.setViewportView(jta_texto);
 
-        jmenu.setBackground(new java.awt.Color(153, 0, 0));
+        jmenu.setBackground(new java.awt.Color(51, 153, 0));
 
         jm_archivo.setText("Archivo");
 
@@ -109,7 +110,7 @@ public class ViewBlocnotas extends javax.swing.JFrame {
     public javax.swing.JMenu jm_archivo;
     public javax.swing.JMenuItem jm_guardar;
     public javax.swing.JMenuItem jm_leer;
-    private javax.swing.JMenuBar jmenu;
+    public javax.swing.JMenuBar jmenu;
     public javax.swing.JTextArea jta_texto;
     // End of variables declaration//GEN-END:variables
 }
