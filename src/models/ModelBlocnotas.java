@@ -26,6 +26,7 @@ public class ModelBlocnotas {
        ViewBlocnotas viewbloc;
        private String path = "C:\\archivos\\archivo.txt";
        private String mensaje;
+       boolean bandera = false;
 
     public String getPath() {
         return path;
@@ -54,7 +55,6 @@ public class ModelBlocnotas {
                 BufferedReader bufferedReader = new BufferedReader(file);
                 while ((row = bufferedReader.readLine()) != null){
                         mensaje = row;
-                        System.out.println(row);
                 }
                 bufferedReader.close();
             } 
@@ -69,10 +69,7 @@ public class ModelBlocnotas {
      * 
      */
     public void writeFile(){
-        boolean bandera = false;
-        if (viewbloc.jta_texto.getText().isEmpty()){
              try{
-                bandera = true;
                 File file = new File(path);
                 FileWriter fileWriter = new FileWriter (file,bandera);
                 try (PrintWriter printWriter  = new PrintWriter(fileWriter)){
@@ -83,18 +80,5 @@ public class ModelBlocnotas {
                 JOptionPane.showMessageDialog(viewbloc,"Error en I/O operación" + ex.getMessage());
                 }
             }
-        else{
-        try{
-        bandera = false;
-        File file = new File(path);
-        FileWriter fileWriter = new FileWriter (file,bandera);
-        try (PrintWriter printWriter  = new PrintWriter(fileWriter)){
-                printWriter.println(mensaje);
-                printWriter.close();
-            }
-        } catch (IOException ex) {
-            JOptionPane.showMessageDialog(viewbloc,"Error en I/O operación" + ex.getMessage());
-        }
-    }
   }
-}
+
