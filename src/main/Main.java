@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package main;
-
+import views.ViewBlocnotas;
+import models.ModelBlocnotas;
+import controllers.ControllerBlocnotas;
 /**
  *
  * @author Diego
@@ -15,7 +17,10 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        ViewBlocnotas viewbloc = new ViewBlocnotas();
+        ModelBlocnotas modelbloc = new ModelBlocnotas();
+        ControllerBlocnotas controllerbloc = new ControllerBlocnotas(viewbloc, modelbloc);
+        
     }
     
 }
