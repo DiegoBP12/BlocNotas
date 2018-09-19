@@ -24,7 +24,7 @@ import views.ViewBlocnotas;
  */
 public class ModelBlocnotas {
        ViewBlocnotas viewbloc;
-       private String path = "C:\\archivos\\archivo.txt";
+       private String path = "C:\\archivos\\texto.txt";
        private String mensaje;
        boolean bandera = false;
 
