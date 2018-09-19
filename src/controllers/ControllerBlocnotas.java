@@ -41,6 +41,7 @@ public class ControllerBlocnotas {
         viewbloc.jta_texto.setText(modelbloc.getMensaje());
     }
     public void guardar(){
+        modelbloc.setMensaje(viewbloc.jta_texto.getText());
         modelbloc.writeFile();
     }
     private void initComponents(){
