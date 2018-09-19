@@ -75,6 +75,7 @@ public class ModelBlocnotas {
                 try (PrintWriter printWriter  = new PrintWriter(fileWriter)){
                     printWriter.print(mensaje);
                     printWriter.close();
+                    JOptionPane.showMessageDialog(viewbloc,"Se modificó correctamente");
             }
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(viewbloc,"Error en I/O operación" + ex.getMessage());
